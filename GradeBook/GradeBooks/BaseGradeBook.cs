@@ -14,7 +14,7 @@ namespace GradeBook.GradeBooks
         public string Name { get; set; }
         public List<Student> Students { get; set; }
         public GradeBookType Type { get; set; }
-        public bool IsWeighted { get; set; }
+        public bool isWeighted { get; set; }
 
         public BaseGradeBook(string name, bool IsWeighted)
         {
@@ -129,7 +129,7 @@ namespace GradeBook.GradeBooks
                     break;
             }
 
-            if (IsWeighted && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled))
+            if (isWeighted && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled))
                 gpa++;
 
             return gpa;
